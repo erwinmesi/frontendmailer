@@ -2,4 +2,6 @@
 
 use Illuminate\Http\Request;
 
-Route::post('send-email', 'EmailController@index');
+Route::namespace('API')->group(function () {
+  Route::post('send-email', 'EmailController@index');
+});
